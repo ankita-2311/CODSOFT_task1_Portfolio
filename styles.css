@@ -125,7 +125,6 @@ section {
 #projects .project a:hover {
     background: #6a11cb;
 }
-
 /* Contact Styles */
 #contact p {
     font-size: 1.1rem;
@@ -133,7 +132,7 @@ section {
 }
 
 #contact a {
-    color: #2575fc;
+    color: inherit; /* Change the color to inherit from the parent */
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -161,7 +160,6 @@ section {
 .social-links a:hover {
     background: #6a11cb;
 }
-
 /* Footer Styles */
 footer {
     background: #333;
