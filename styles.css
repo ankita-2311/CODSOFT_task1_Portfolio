@@ -19,16 +19,16 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem; /* Adjusted padding for better spacing */
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
     text-align: center;
     padding: 3rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Increased shadow intensity */
 }
 
 header h1 {
@@ -50,69 +50,79 @@ section {
 #about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around; /* Centered items */
     flex-wrap: wrap;
 }
 
 #about img {
     width: 150px;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures circular image without distortion */
     border-radius: 50%;
     margin-right: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #about .text {
     flex: 1;
-    text-align: center;
+    text-align: left; /* Adjusted alignment for text */
 }
 
 #skills .skill-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center skills horizontally */
     flex-wrap: wrap;
 }
 
 #skills .skill {
     background: #2575fc;
     color: #fff;
-    padding: 1rem;
+    padding: 0.8rem 1.5rem; /* Adjusted padding */
     margin: 0.5rem;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Slightly reduced font size */
     text-transform: uppercase;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #projects .project {
     margin: 2rem 0;
-    text-align: left;
+    padding: 1.5rem; /* Increased padding */
+    text-align: center; /* Centered project content */
+    background: #fff; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #projects img {
     width: 100%;
     max-width: 600px;
+    height: auto; /* Ensures images resize proportionally */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #projects h3 {
-    margin: 0.5rem 0 0.2rem;
+    margin-top: 1rem; /* Increased top margin */
+    font-size: 1.5rem; /* Larger font size */
 }
 
 #projects p {
-    margin: 0;
+    font-size: 1rem; /* Reduced font size */
 }
 
-#resume a {
-    text-decoration: none;
-    color: #fff;
-    background: #2575fc;
+#projects .project a {
+    display: inline-block;
+    margin-top: 1rem;
     padding: 10px 20px;
+    background: #2575fc;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
     transition: background 0.3s ease;
 }
 
-#resume a:hover {
+#projects .project a:hover {
     background: #6a11cb;
 }
 
@@ -141,7 +151,7 @@ section {
 .social-links a {
     margin: 0 1rem;
     color: #fff;
-    background: #fcfdff;
+    background: #2575fc;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -163,25 +173,24 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    #about {
-        flex-direction: column;
-        text-align: center;
-    }
-
     #about img {
-        margin: 0 0 2rem 0;
+        margin-bottom: 1.5rem; /* Increased bottom margin */
     }
 
-    .skill-list {
+    #skills .skill-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .skill {
-        margin: 0.5rem 0;
+    #projects .project {
+        padding: 1.5rem 1rem; /* Adjusted padding */
     }
 
     #projects img {
-        width: 100%;
+        max-width: 100%;
+    }
+
+    #projects h3 {
+        font-size: 1.2rem; /* Smaller font size */
     }
 }
